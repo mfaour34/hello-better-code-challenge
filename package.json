@@ -1,0 +1,45 @@
+{
+  "dependencies": {
+    "fastify": "^3.28.0",
+    "lodash": "^4.17.21",
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.2.10",
+    "morgan": "^1.10.0"
+  },
+  "name": "hello-better-code-challenge",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "concurrently": "^7.1.0",
+    "eslint": "^8.12.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "test": "yarn jest --runInBand --forceExit",
+    "test:watch": "yarn test --watch",
+    "lint": "eslint . --ext .ts --max-warnings 0",
+    "lint:fix": "yarn lint --fix",
+    "lint:strict": "yarn tsc --noEmit && yarn lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfaour34/hello-better-code-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfaour34/hello-better-code-challenge/issues"
+  },
+  "homepage": "https://github.com/mfaour34/hello-better-code-challenge#readme"
+}
