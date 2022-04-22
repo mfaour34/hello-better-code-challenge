@@ -48,6 +48,7 @@
   },
   "homepage": "https://github.com/mfaour34/hello-better-code-challenge#readme",
   "_moduleAliases": {
-    "@shared": "dist/modules/shared"
+    "@shared": "dist/modules/shared",
+    "@course": "dist/modules/course"
   }
 }
