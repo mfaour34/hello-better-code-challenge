@@ -9,6 +9,7 @@ import morgan from 'morgan'
 import { AccessTokensProvider } from '@shared/types/AccessTokensProvider'
 import { getAccessTokenCheckerMiddleware } from '../middleware/accessTokenCheckerMiddleware'
 import { applyHealthCheckRoutes } from './healthCheck/healthCheckRoutes'
+import { applyCourseRoutes } from '@course/api/CourseRoutes'
 dotenv.config()
 
 const HTTP_PORT = parseInt(env.HTTP_PORT as string)
@@ -50,6 +51,7 @@ export function createApp(accessTokensProvider: AccessTokensProvider): express.E
 
 function applySystemRoutes(app: Application) {
   applyHealthCheckRoutes(app)
+  applyCourseRoutes(app)
 }
 
 // eslint-disable-next-line no-unused-vars

@@ -10,7 +10,7 @@ export function getClient() {
 
 export async function mongoConnect(retries = 0) {
   try {
-    connection = await mongoose.connect('mongodb://localhost:27017/quizmania')
+    connection = await mongoose.connect('mongodb://localhost:27017/helloBetter')
     if (connection) {
       console.log('mongo ready')
     } else {

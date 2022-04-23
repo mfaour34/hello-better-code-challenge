@@ -1,8 +1,8 @@
-import { ICourse, ICourseResponse, ICreateCourse, IFilterCourses } from '../entities/ICourse'
+import { ICourse, ICreateCourse, IFilterCourses, IUpdateCourse } from '../entities/ICourse'
 
-export interface IQuizRepository {
+export interface ICourseRepository {
   create: (attrs: ICreateCourse) => Promise<ICourse | undefined>
-  get: (filters: IFilterCourses) => Promise<ICourseResponse[] | undefined>
-  update: (attrs: ICreateCourse) => Promise<ICourse | undefined>
+  get: (filters: IFilterCourses) => Promise<ICourse[] | undefined>
+  update: (attrs: IUpdateCourse) => Promise<ICourse | null>
   delete: (id: string) => Promise<boolean>
 }
