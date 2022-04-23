@@ -25,6 +25,13 @@ next, install all dependencies
 npm i
 ```
 
+create .env file and add the following values
+```bash
+HTTP_PORT=<port>
+API_ACCESS_TOKENS=<tokens list comma seperated>
+
+```
+
 finally, to start the server, make sure you are in the server directory and run the following command in terminal or cmd
 ```bash
 npm run dev
